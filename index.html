@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamSense - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="login-page">
+    <div class="login-box">
+        <h1>CamSense</h1>
+        <p>Bem vindo, por favor registre sua conta.</p>
+
+        <form id="login-form">
+            <div class="login-data">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="exemplo@gmail.com">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Mínimo 6 caracteres">
+            </div>
+
+            <button type="submit" onclick="verificarLogin()">Cadastrar</button>
+        </form>
+
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
