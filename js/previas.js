@@ -58,3 +58,21 @@ function startSlideshow() {
 function startDocumentos() {
     alert("Nenhum documento encontrado, para mais informações veja o Chatbot!")
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slideshowPet = document.getElementById("slideshow-pet");
+    const previewDocs = document.getElementById("preview-docs");
+    const previewChatbot = document.getElementById("preview-chatbot");
+
+    if (slideshowPet) {
+        slideshowPet.addEventListener("click", startSlideshow);
+    }
+
+    if (previewDocs) {
+        previewDocs.addEventListener("click", startDocumentos);
+    }
+
+    if (previewChatbot) {
+        previewChatbot.addEventListener("click", startChatbot);
+    }
+});
