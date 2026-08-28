@@ -135,5 +135,36 @@ function startTableGame() {
 }
 
 function startOddEvenGame() {
+    let keepPlaying = true
 
+    while ( keepPlaying ) {
+        let generatedNumber = getRandomNumber(1, 100)
+        let isEven = generatedNumber % 2 == 0
+
+        let answer = prompt("O numero sorteado é PAR ou IMPAR?").toUpperCase()
+
+        while ( true ) {
+            if ( answer == "PAR" || answer == "IMPAR" ) {
+                if ( (answer == "PAR" && isEven) || (answer == "IMPAR" && !isEven) ) {
+                    alert(`Você acertou! O numero era ${generatedNumber}`)
+                } else {
+                    alert(`Você errou! O numero era ${generatedNumber}`)
+                }
+                break
+            } else {
+                answer = prompt("Resposta invalida! Digite PAR ou IMPAR:").toUpperCase()
+            }
+        }
+
+        let shouldContinue = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
+
+        if ( shouldContinue == "Y" ) {
+            keepPlaying = true
+        } else if ( shouldContinue == "N" ) {
+            keepPlaying = false
+        } else {
+            alert("Opção invalida! Saindo do jogo..")
+            keepPlaying = false
+        }
+    }
 }
