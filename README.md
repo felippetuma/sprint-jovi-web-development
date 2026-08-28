@@ -1,4 +1,4 @@
-# CamSense JOVI - Visionists
+# Sprint Jovi Web Development - Visionists
 
 O protótipo desenvolvido para **Web Development** da solução de câmera inteligente **CamSense**, foi elaborada para o Challenge da Jovi. O projeto foi criado para simular a experiência do aplicativo da câmera com múltiplos modos inteligentes sendo Pet, Documentos e Chatbot (*JoviHelp*), oferecendo assim uma interface simples para demonstrar como a JOVI poderia interpretar e reagir a cena que está sendo fotografada, além de disponibilizar o uso do chatbot *JoviHelp* para auxiliar o usuário para utilizar a câmera da melhor maneira possível.
 
