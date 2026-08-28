@@ -1,3 +1,4 @@
+import {setupMain} from './jogo-matematica.js'
 
 function startChatbot() {
     let keepAsking = true
@@ -5,7 +6,7 @@ function startChatbot() {
     while (keepAsking) {
         const escolha = prompt(
         "Bem-vindo ao JOVI Chatbot!\n\n" +
-        "1. Jogos de Matematica" +
+        "1. Jogos de Matematica\n" +
         "2. O que o Modo Pet faz?\n" +
         "3. Como funciona o Modo Documentos?\n" +
         "4. Falar com um humano\n\n" +
@@ -15,7 +16,8 @@ function startChatbot() {
         switch(escolha) {
 
         case "1":
-
+            setupMain()
+            break;
         case "2":
             alert("O Modo Pet tenta chamar a atenção do seu animal, com opções predefinidas ou feitas pelo usuario!");
             break;
