@@ -7,12 +7,12 @@ let games = {
     2 : {
         name: "Jogo de Tabuada",
         description: "Sorteia dois numeros e uma operação, e acerte o resultado!",
-        activate: startClockGame
+        activate: startTableGame
     },
     3 : {
         name: "Par ou Impar",
         description: "Acerte se o numero é par ou impar!",
-        activate: startEquationGame
+        activate: startOddEvenGame
     },
 }
 
@@ -37,6 +37,19 @@ export function setupMain() {
     }
     }
 
+}
+
+function shouldContinue() {
+    let answer = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
+
+    if ( answer == "Y" ) {
+        return true
+    } else if ( answer == "N" ) {
+        return false
+    } else {
+        alert("Opção invalida! Saindo do jogo..")
+        return false
+    }
 }
 
 function getRandomNumber(min, max) {
@@ -89,16 +102,7 @@ function startGuessGame() {
             }
         }
 
-        let shouldContinue = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
-
-        if ( shouldContinue == "Y" ) {
-            keepPlaying = true
-        } else if ( shouldContinue == "N" ) {
-            keepPlaying = false
-        } else {
-            alert("Opção invalida! Saindo do jogo..")
-            keepPlaying = false
-        }
+        keepPlaying = shouldContinue()
     }
 }
 
@@ -121,16 +125,7 @@ function startTableGame() {
             alert(`Errou! A resposta correta era ${correctAnswer}`)
         }
 
-        let shouldContinue = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
-
-        if ( shouldContinue == "Y" ) {
-            keepPlaying = true
-        } else if ( shouldContinue == "N" ) {
-            keepPlaying = false
-        } else {
-            alert("Opção invalida! Saindo do jogo..")
-            keepPlaying = false
-        }
+        keepPlaying = shouldContinue()
     }
 }
 
@@ -156,15 +151,6 @@ function startOddEvenGame() {
             }
         }
 
-        let shouldContinue = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
-
-        if ( shouldContinue == "Y" ) {
-            keepPlaying = true
-        } else if ( shouldContinue == "N" ) {
-            keepPlaying = false
-        } else {
-            alert("Opção invalida! Saindo do jogo..")
-            keepPlaying = false
-        }
+        keepPlaying = shouldContinue()
     }
 }
