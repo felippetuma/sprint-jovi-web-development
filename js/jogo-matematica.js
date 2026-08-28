@@ -46,6 +46,21 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (maxRounded - minRounded + 1)) + minRounded;
 }
 
+function calculateAnswer(numberA, numberB, operation) {
+    switch (operation) {
+        case "x":
+            return numberA * numberB
+        case "-":
+            return numberA - numberB
+        case "+":
+            return numberA + numberB
+        case "/":
+            return numberA / numberB
+        default:
+            return null
+    }
+}
+
 function startGuessGame() {
     let keepPlaying = true
 
@@ -88,7 +103,35 @@ function startGuessGame() {
 }
 
 function startTableGame() {
+    let operations = ["x", "-", "+", "/"]
+    let keepPlaying = true
 
+    while ( keepPlaying ) {
+        let numberA = getRandomNumber(1, 10)
+        let numberB = getRandomNumber(1, 10)
+        let chosenOperation = operations[getRandomNumber(0, operations.length - 1)]
+
+        let correctAnswer = calculateAnswer(numberA, numberB, chosenOperation)
+
+        let answer = Number(prompt(`Qual o resultado de ${numberA} ${chosenOperation} ${numberB}?`))
+
+        if ( answer === correctAnswer ) {
+            alert("Acertou! Parabéns!")
+        } else {
+            alert(`Errou! A resposta correta era ${correctAnswer}`)
+        }
+
+        let shouldContinue = prompt("Deseja continuar a jogar? (Y/N): ").toUpperCase()
+
+        if ( shouldContinue == "Y" ) {
+            keepPlaying = true
+        } else if ( shouldContinue == "N" ) {
+            keepPlaying = false
+        } else {
+            alert("Opção invalida! Saindo do jogo..")
+            keepPlaying = false
+        }
+    }
 }
 
 function startOddEvenGame() {
