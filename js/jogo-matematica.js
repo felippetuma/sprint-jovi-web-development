@@ -5,13 +5,13 @@ let games = {
         activate: startGuessGame
     },
     2 : {
-        name: "Contra o Relógio",
-        description: "Acerte as equações em um tempo determinado!",
+        name: "Jogo de Tabuada",
+        description: "Sorteia dois numeros e uma operação, e acerte o resultado!",
         activate: startClockGame
     },
     3 : {
-        name: "Acerte a Equação",
-        description: "Escreva a equação que tem como resultado o numero sorteado!",
+        name: "Par ou Impar",
+        description: "Acerte se o numero é par ou impar!",
         activate: startEquationGame
     },
 }
@@ -87,10 +87,10 @@ function startGuessGame() {
     }
 }
 
-function startClockGame() {
-    alert("bbbbbbbbbbb")
+function startTableGame() {
+
 }
 
-function startEquationGame() {
-    alert("ccccccccccc")
+function startOddEvenGame() {
+
 }
