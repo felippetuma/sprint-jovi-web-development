@@ -36,6 +36,10 @@ git clone https://github.com/felippetuma/sprint-jovi-web-development.git
 - Clique com o botão direito no arquivo `index.html` e selecione o **Open with Live Server**
 - O projeto irá abrir de forma automática no navegador, diretamente na tela de login.
 
+### Uso de Inteligência Artificial
+
+Foi utilizado inteligencia artificial para auxiliar na conexão entre o `script.js`, `previas.js` e `jogo-matematica.js`. Todos os códigos que foram gerados por inteligencia artificial foram revisados, testados e ajustados de forma manual pela nossa equipe antes mesmo de ser incorporado a esse projeto.
+
 ### Login no sistema
 
 Não é necessario utilizar nenhum e-mail ou senha de teste nesse protótipo não contem uma atentificação real. A tela de login é apenas uma simulação, utilizando qualquer e-mail em formato válido e senha com **no mínimo 6 caracteres** são aceitos para prossegir até a tela de prévias.
@@ -43,11 +47,11 @@ Não é necessario utilizar nenhum e-mail ou senha de teste nesse protótipo nã
 ### Links
 
 - **Repositório no GitHub**: [Repositório no GitHub](https://github.com/felippetuma/sprint-jovi-web-development)
-- **Deploy na Vercel**: [Link do Deploy na Vercel](https://sprint-jovi-web-development.vercel.app/)
+- **Deploy na Vercel**: [Link da Vercel](https://sprint-jovi-web-development.vercel.app/)
 
 ### Integrantes
 
-- Davi Yuu Santos Toyota RM;: 569557
+- Davi Yuu Santos Toyota RM.: 569557
 - Felipe Santana Motta RM.: 570550
 - Felippe Tuma Costa RM.: 569459
 - Renan Martins da Silva RM.: 569549
